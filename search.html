@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="css/output.css" />
+
+    <title>Assignment</title>
+  </head>
+
+  <body class="bg-neutral-900">
+    <!-- npx tailwindcss -i ./css/input.css -o ./css/output.css --watch -->
+
+    <div
+      id="modal"
+      class="hidden justify-center items-center w-5/6 max-w-full start-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 fixed z-50 bg-zinc-950 rounded-lg"
+    >
+      <div
+        class="closeModal absolute top-0 left-full -translate-x-full cursor-pointer pt-5 pr-5 group"
+      >
+        <i class="fa-solid text-yellow-400 fa-xmark fa-2xl"></i>
+      </div>
+      <div class="container w-full h-full p-10" id="mealDetails"></div>
+    </div>
+
+    <nav
+      class="fixed top-0 start-0 h-full w-1/4 -translate-x-3/4 transition-all duration-500 z-50"
+    >
+      <div class="container h-full">
+        <div class="grid grid-cols-4 h-full">
+          <div class="col-span-3 h-full bg-stone-900">
+            <ul class="p-4 text-white text-lg relative top-full" id="navUl">
+              <li class="mb-3">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="mb-3">
+                <a href="search.html">Search</a>
+              </li>
+              <li class="mb-3">
+                <a href="category.html">category</a>
+              </li>
+              <li class="mb-3">
+                <a href="area.html">Area</a>
+              </li>
+              <li class="mb-3">
+                <a href="ingredients.html">Ingredients</a>
+              </li>
+              <li class="mb-3">
+                <a href="contact.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="col-span-1 relative h-full items-center flex flex-col bg-yellow-50"
+          >
+            <img
+              class="w-1/2 relative top-0 mt-5"
+              src="images/logo.png"
+              alt="smile"
+            />
+            <button
+              id="navBtn"
+              class="cursor-pointer relative top-1/2 -translate-y-24"
+            >
+              <i class="fa-solid open-close-icon fa-2x fa-align-justify"></i>
+            </button>
+            <div class="relative top-full -translate-y-44">
+              <i class="fa-solid fa-globe d-block"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="container mx-auto w-4/5 mt-10">
+        <form action="">
+          <div class="grid gap-3 grid-cols-2">
+            <div class="col-span-1">
+              <input
+                id="search"
+                class="w-full p-2"
+                placeholder="search by name"
+                type="text"
+              />
+            </div>
+            <div class="col-span-1">
+              <input
+                id="lettersearch"
+                maxlength="1"
+                class="w-full p-2"
+                placeholder="search by first letter"
+                type="text"
+              />
+            </div>
+          </div>
+        </form>
+        <div
+          class="grid cardContainer grid-cols-4 gap-4 mt-20 rounded "
+          id="searchcardContainer"
+        ></div>
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/ae6984fa9e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
